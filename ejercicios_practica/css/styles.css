@@ -1,0 +1,24 @@
+*{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+img{
+    height: 30px;
+}
+nav ul{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgba(19, 2, 2, 0.664);
+    padding: 25px;
+}
+ li img:hover{
+    cursor: pointer;
+    border-bottom: 3px solid #c23469;
+    transform: translate(10px);
+}
+.avatar:hover{
+    transform:scale(1.5) translateY(20px);
+}

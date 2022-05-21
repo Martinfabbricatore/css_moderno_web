@@ -1,0 +1,95 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-decoration: none;
+    color:aliceblue;
+}
+body{
+    display: grid;
+    height: 100vh;
+    grid-template-columns: repeat(4 1fr); 
+    grid-template-rows: repeat(12 1fr);
+    grid-template-areas: 
+    "h h h n n n n n n n n n"
+    "s s s s s s s s s s s s"
+    "s s s s s s s s s s s s"
+    "s s s s s s s s s s s s"
+    "f f f f f f f f f f f f";
+}
+.perfil{
+    height: 100px;
+}
+.barra{
+    height: 50px;
+}
+.img-page2{
+    width: 250px;
+}
+
+.contacto{
+    height: 100px;
+}
+
+header{
+    grid-area: h;
+    background-color: rgb(47,79,78) ;
+    padding-left: 50px;
+}
+.contenedor{
+    grid-area: n;
+    background-color: rgb(42,42,42);
+    }
+ul{
+    display: flex;
+    justify-content: space-around;
+    padding: 50px;
+}
+.page2{
+    grid-area: s;
+    background-color: rgb(31,34,51);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+footer{
+   grid-area: f;
+   background-color: rgb(35,40,60);
+   padding-left: 50px;
+}
+li img:hover{
+    cursor: pointer;
+    border-bottom: 3px solid #c23469;
+    transform: translate(10px);
+}
+.perfil:hover{
+    cursor:pointer ;
+}
+.img-page2:hover{
+    cursor: pointer;
+}
+.contacto:hover{
+    cursor: pointer;
+}
+@media screen and (max-width: 1000px) {
+    body{
+        grid-template: repeat(auto-fit, minmax(10px, 1fr)) / 1fr;
+        grid-template-areas:
+          "n"
+          "h"
+          "s"
+          "f";
+      } 
+      .img-page2{
+          width: 100px;
+      }
+      header{
+          background-color:rgb(47,79,78);
+         font-size: small;
+      }  
+}
